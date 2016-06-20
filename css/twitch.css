@@ -1,0 +1,13 @@
+body{
+  background: -webkit-linear-gradient(left top, black, gray);
+}
+
+.well{
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius:10px;
+   border-bottom-left-radius: 10px;
+}
+.row{
+  max-width: 100%
+}
