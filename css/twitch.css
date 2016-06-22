@@ -1,14 +1,65 @@
 body{
   background: -webkit-linear-gradient(left top, black, gray);
+  padding-bottom: 70px;
+
 }
 
-.well{
-  border-top-right-radius: 10px;
-  border-top-left-radius: 10px;
-  border-bottom-right-radius:10px;
-   border-bottom-left-radius: 10px;
+/*.row{*/
+/*margin-left: 5%;*/
+/*margin-right: 5%;*/
+/*}*/
+
+
+.on{
+  color: green;
 }
-.row{
-margin-left: 5%;
-margin-right: 5%;
+
+.off{
+  color: red;
+}
+
+
+li{
+  cursor: pointer;
+  margin-left: 35%;
+  padding-bottom: 3px;
+  font-family: 'Orbitron', sans-serif;
+  color: #B6E1F0;
+}
+
+
+
+.liOff{
+  cursor:not-allowed;
+}
+
+.open > .dropdown-menu {
+  -webkit-transform: scale(1, 1);
+  transform: scale(1, 1);
+  opacity:1;
+}
+.dropdown-menu {
+  opacity:.3;
+  -webkit-transform-origin: bottom;
+  transform-origin: bottom;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-transform: scale(1, 0);
+  display: block;
+  transition: all 0.2s linear;
+  -webkit-transition: all 0.2s linear;
+  background-color: transparent;
+  border-color: transparent;
+
+}
+
+.navbar-fixed-bottom{
+  background-color: black;
+  border-radius: 300px 300px 0px 0px;
+
+}
+
+.dropdown{
+text-align: center;
+
 }
