@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
 
-var twitchId = ["ESL_SC2", "OgamingSC2", "cretetion", "freecodecamp", "storbeck", "habathcx", "RobotCaleb", "noobs2ninjas"];
+var twitchId = ["ESL_SC2", "OgamingSC2", "cretetion", "freecodecamp", "storbeck", "habathcx", "RobotCaleb", "noobs2ninjas","comster404"];
 var api = "https://api.twitch.tv/kraken/channels/";
 var streamApi = "https://api.twitch.tv/kraken/streams/";
 
@@ -18,8 +18,9 @@ getOnline(call, user);
 
 function getOnline(call, user){
 
-  $.getJSON(call, function(ok) {
+  $.getJSON(call, function(ok,pass) {
   var isOnline = ok.stream;
+console.log(ok.stream.channel.logo);
 
    if (isOnline) {
 
@@ -30,8 +31,11 @@ function getOnline(call, user){
      appendDropOff(user);
    }
 
-  });
+  })
 
+  .fail(function() {
+    error(user);
+});
 }
 
 function appendDropOn(user){
@@ -46,6 +50,11 @@ $(".dropdown-menu").append("<li class ='liOff disabled' id='target'><span class=
 
 }
 
+function error(user){
+
+$(".dropdown-menu").append("<li class ='error' id='target'><span class='glyphicon glyphicon-alert off' aria-hidden='true'></span> " + user + "</li>");
+
+}
 
 $("ul").click(function(name) {
 $( ".img-responsive" ).remove();
